@@ -10,14 +10,13 @@
 </template>
 
 <script>
-import dailyProgress from 'daily-progress/index';
 import Top from './components/Top';
 
 export default {
   name: 'app',
   data() {
     return {
-      percentMain: dailyProgress() / 10,
+      percentMain: this.$store.state.percentComplete,
     };
   },
   components: {
