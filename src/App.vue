@@ -1,19 +1,25 @@
 <template>
   <div id="app">
     <header>
-      <span>This Year Progress</span>
+      <span>Welcome</span>
     </header>
     <main>      
-      <top></top>
+      <top :percent-from-app="percentMain"></top>
     </main>
   </div>
 </template>
 
 <script>
+import dailyProgress from 'daily-progress/index';
 import Top from './components/Top';
 
 export default {
   name: 'app',
+  data() {
+    return {
+      percentMain: dailyProgress() / 10,
+    };
+  },
   components: {
     Top,
   },

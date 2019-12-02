@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
-    <heading></heading>    
-    <progressbar></progressbar>
+  <div>    
+    <heading :percent-top="percentFromApp"></heading>    
+    <progressbar :percent-top="percentFromApp"></progressbar>
   </div>
 </template>
 
@@ -11,6 +11,9 @@ import Progressbar from './Top/Progressbar';
 
 export default {
   name: 'top',
+  props: {
+    percentFromApp: Number,
+  },
   components: {
     Heading,
     Progressbar,
@@ -19,22 +22,3 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #35495E;
-}
-</style>

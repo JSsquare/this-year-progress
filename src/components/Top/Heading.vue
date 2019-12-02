@@ -1,14 +1,12 @@
 <template>    
-        <h1>{{ headerMsg }}</h1>            
+        <h1>This Year Is {{percentTop * 10}}% Complete</h1>
 </template>
 
 <script>
 export default {
   name: 'heading',
-  data() {
-    return {
-      headerMsg: "Today's Progress",
-    };
+  props: {
+    percentTop: Number,
   },
 };
 </script>
