@@ -1,6 +1,6 @@
 <template>
-    <div>        
-        <meter :value="percentTop / 10"></meter>
+    <div>
+        <meter :value="this.$store.state.percentComplete / 10"></meter>        
     </div>
 </template>
 

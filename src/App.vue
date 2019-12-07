@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <header>
-      <span>Welcome</span>
+      <span>This Year</span>
     </header>
     <main>      
       <top :percent-from-app="percentMain"></top>
+      <bottom></bottom>
     </main>
   </div>
 </template>
 
 <script>
 import Top from './components/Top';
+import Bottom from './components/Bottom';
 
 export default {
   name: 'app',
@@ -21,6 +23,7 @@ export default {
   },
   components: {
     Top,
+    Bottom,
   },
 };
 </script>

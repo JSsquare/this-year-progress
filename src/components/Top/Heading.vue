@@ -1,5 +1,5 @@
 <template>    
-        <h1>This Year Is {{percentTop * 10}}% Complete</h1>
+        <h1>{{this.$store.state.text}}</h1>
 </template>
 
 <script>
