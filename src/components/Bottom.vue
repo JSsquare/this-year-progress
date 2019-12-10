@@ -1,6 +1,6 @@
 <template>
   <div>    
-   <datepicker :inline="true" @selected="updateDate" :value="computedDate" :disabled-dates="disabledDates"></datepicker>
+   <datepicker class="bottom-datepicker" :inline="true" @selected="updateDate" :value="computedDate" :disabled-dates="disabledDates"></datepicker>
   </div>
 </template>
 
@@ -38,3 +38,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.bottom-datepicker {
+  position: absolute;
+  left: 40%;
+  margin-top: 7%;
+}
+</style>

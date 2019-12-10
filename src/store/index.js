@@ -6,16 +6,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    percentComplete: dailyProgress.todaysProgress() / 10,
+    progressValue: dailyProgress.todaysProgress(),
     date: new Date(),
-    text: `Today: This Year Is ${dailyProgress.todaysProgress()}% Complete`,
+    text: `Today: This Year is ${dailyProgress.todaysProgress()}% Complete`,
   },
   mutations: {
     updateToPercentLeftover(state, newDate) {
       // eslint-disable-next-line no-param-reassign
-      state.percentComplete = dailyProgress.fromThisDaysProgress(newDate) / 10;
+      state.progressValue = dailyProgress.fromThisDaysProgress(newDate);
       // eslint-disable-next-line no-param-reassign
-      state.text = `From Date Selected: ${state.percentComplete * 10}% Remaining in ${newDate.getFullYear()}`;
+      state.text = `From Date Selected: ${state.progressValue}% Remaining in ${newDate.getFullYear()}`;
     },
   },
 });
