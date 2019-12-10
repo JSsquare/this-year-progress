@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/this-year-progress/',
+  publicPath: '/this-year-progress',
 };
