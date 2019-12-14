@@ -11,7 +11,7 @@ export default new Vuex.Store({
     text: `This Year is ${dailyProgress.todaysProgress()}% Complete`,
   },
   mutations: {
-    updateToPercentLeftover(state, newDate) {      
+    updateToPercentLeftover(state, newDate) {
       state.progressValue = dailyProgress.fromThisDaysProgress(newDate);
       state.text = `From Date Selected: ${state.progressValue}% Remaining in ${newDate.getFullYear()}`;
     },
