@@ -8,13 +8,11 @@ export default new Vuex.Store({
   state: {
     progressValue: dailyProgress.todaysProgress(),
     date: new Date(),
-    text: `Today: This Year is ${dailyProgress.todaysProgress()}% Complete`,
+    text: `This Year is ${dailyProgress.todaysProgress()}% Complete`,
   },
   mutations: {
-    updateToPercentLeftover(state, newDate) {
-      // eslint-disable-next-line no-param-reassign
+    updateToPercentLeftover(state, newDate) {      
       state.progressValue = dailyProgress.fromThisDaysProgress(newDate);
-      // eslint-disable-next-line no-param-reassign
       state.text = `From Date Selected: ${state.progressValue}% Remaining in ${newDate.getFullYear()}`;
     },
   },
